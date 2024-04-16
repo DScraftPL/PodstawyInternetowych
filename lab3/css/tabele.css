@@ -1,0 +1,32 @@
+table {
+  background: #fde456;
+  text-align: center;
+  width: 94%;
+  margin: 2%;
+  border: 1pt blue solid;
+}
+
+caption {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+thead, tfoot {
+  background: blue;
+  color: white;
+  font-size: 110%;
+  padding: 5pt;
+}
+
+td, th {
+  border: 1pt blue solid;
+}
+
+tfoot a {
+  color:white;
+}
+
+.parzysty {
+  background: white;
+}
+

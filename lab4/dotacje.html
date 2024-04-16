@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Dane</legend>
+            Nazwa podmiotu: <input type="text" list="podpowiedzi" required> <br/>
+            <datalist id="podpowiedzi">
+                <option value="Przedsiebiorstwo"></option>
+                <option value="Firma"></option>
+                <option value="Szkola"></option>
+                <option value="Uczelnia"></option>
+            </datalist>
+            Kwota: <input type="number" name="dotacje" min="20" step="3" required>
+        </fieldset>
+        <fieldset>
+            <legend>Dane Karty</legend>
+            Visa: <input type="radio" name="karta" value="visa" required>
+            Mastercard: <input type="radio" name="karta" value="mastercard" required>
+            Prepaid: <input type="radio" name="karta" value="prepaid" required> <br/>
+            Numer Karty: <input type="text" name="numerkarty" pattern="[0-9]{13,16}" required> <br/>
+            Data ważności karty: <input type="month" name="datakarty" required> <br/>
+            CCV: <input type="text" name="ccvkarty" pattern="[0-9]{3,4}" required>
+        </fieldset>
+        <fieldset>
+            <legend>Kod Darczyncy</legend>
+            Kod darczyncy: <input type="text" name="darczynca" pattern="[A-Za-z0-9]{3,}" required>
+        </fieldset>
+        <input type="submit" value="Wyslij">
+        <input type="reset" value="Resetuj">
+    </form>
+</body>
+</html>

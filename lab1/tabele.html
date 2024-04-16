@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/tabele.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="kontener">
+      <div id="baner"><h1>Szybki kurs HTML</h1></div>
+      <div id="menu">
+        <a href="index.html">Podstawowe znaczniki </a>
+        <a href="tabele.html">Tworzenie tabel </a>
+        <a href="formularze.html">Budowa formularzy </a>
+      </div>
+      <div id="tresc">
+        <h2>Podstawowe znaczniki HTML to:</h2>
+        <ul>
+          <li> &lt;html&gt -- korzeń html</li>
+          <li> &lt;body&gt -- korzen dokumentu</li>
+          <li>tresc dokumentu</li>
+          <li>akapit</li>
+          <li>obrazek</li>
+        </ul>
+        <p> <a href="https://validator.w3.org/"> HTML walidator </a> <img src="w3c.png" alt="walidator"> </p>
+      </div>
+    </div>
+    <h1>Przykładowa Tabela w HTML</h1>
+    <a href="tabele.html">link bez zmiany koloru</a>
+    <table>
+      <caption>TO JEST TABELA</caption>
+      <thead>
+        <td colspan="3" >test, test!</td>
+        <td colspan="3" >SOS!</td>
+      </thead>
+      <tr class="parzysty">
+        <td >Hello</td>
+        <td >my</td>
+        <td >name</td>
+        <td >is</td>
+        <td colspan="2">Markiplier</td>
+      </tr>
+      <tr class="nieparzysty">
+        <td >C++</td>
+        <td >Java</td>
+        <td >HTML</td>
+        <td >CSS</td>
+        <td >zielony</td>
+        <td >czerowny</td>
+      </tr>
+      <tr class="parzysty">
+        <td colspan="6">przyklad</td>
+      </tr>
+      <tfoot>
+        <td colspan="6" class="nieparzysty">
+          <a href="tabele.html">colspan 5?</a>
+        </td>
+      </tfoot>
+    </table>
+  <div id="stopka"> <p> &copy;BP </p> </div>
+  </body>
+</html>

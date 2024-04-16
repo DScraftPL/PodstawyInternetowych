@@ -1,0 +1,11 @@
+.obrazy {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.obrazy a {
+  width: 28%;
+  margin: 2%;
+}

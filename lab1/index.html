@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Szybki kurs HTML </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabele.css">
+    <link rel="stylesheet" href="css/formularze.css">
+  </head>
+  <body>
+    <div id="kontener">
+      <div id="baner"><h1>Szybki kurs HTML</h1></div>
+      <div id="menu">
+        <a href="index.html">Podstawowe znaczniki </a>
+        <a href="tabele.html">Tworzenie tabel </a>
+        <a href="formularze.html">Budowa formularzy </a>
+      </div>
+      <div id="tresc">
+        <h2>Podstawowe znaczniki HTML to:</h2>
+        <ul>
+          <li> &lt;html&gt -- korzeń html</li>
+          <li> &lt;body&gt -- korzen dokumentu</li>
+          <li>tresc dokumentu</li>
+          <li>akapit</li>
+          <li>obrazek</li>
+        </ul>
+        <p> <a href="https://validator.w3.org/"> HTML walidator </a> <img src="w3c.png" alt="walidator"> </p>
+      </div>
+      </div>
+    <div id="tabela">
+      <table border="1">
+        <caption>Tabela Jezykowa</caption>
+        <thead>
+          <tr>
+            <th rowspan="2">Jezyki Programowniaa</td>
+            <th colspan="2"> Pozycja </td>
+          </tr>
+          <tr>
+            <th> 2015 </th>
+            <th> 2020 </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="parzysty">
+            <td >Java</td>
+            <td>2 </td>
+            <td>3 </td>
+          <tr>
+          <tr>
+            <td >C++</td>
+            <td>10</td>
+            <td>300</td>
+          </tr>
+          <tr class="parzysty">
+            <td>Python</td>
+            <td>20</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>C#</td>
+            <td>90</td>
+            <td>8080</td>
+          </tr>
+          <tfoot> 
+              <td colspan="3"> HELLO THERE </td>
+          </tfoot>
+        </tbody>
+      </table>
+    </div>
+    <div id="formularz">
+      <form action="mailto:ja@nieja.pl" method="POST">
+        <h3>Przykładowy formularz HTML:</h3>
+          <label for="name">Nazwisko: <input type="text" name="name" id="name"></label>
+        <br>
+          <label for="age">Wiek: <input type="number" name="age" id="age"></label>
+        <br>
+        <label for="country"> Państwo: <select id="country">
+          <option value="pl">Polska</option>
+          <option value="cze">Czechy</option>
+        </select></label>
+        <br>
+          <label for="email">Email: <input type="email" name="email" id="email"></label>
+        <br>
+          <h3>zamawiam tutorial z jezyka:</h3>
+          <input type="checkbox" name="jezyk" value="C"> C 
+          <input type="checkbox" name="jezyk" value="C++"> C++
+          <input type="checkbox" name="jezyk" value="PHP"> PHP
+        <br>
+          <h3>Platnosc: </h3>
+          <input type="radio" name="payment" value="1"> karta
+          <input type="radio" name="payment" value="2"> PayPal
+          <input type="radio" name="payment" value="3"> gotowka ?
+        <br>
+        <input type="submit" name="submit">
+      </form>
+    </div>
+    <div id="stopka"> <p> &copy;BP </p> </div>
+  </body>
+</html>

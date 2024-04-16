@@ -1,0 +1,63 @@
+fieldset {
+  margin: 2% 0%;
+  border-color: blue;
+  border-style: dashed;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold; 
+}
+
+fieldset legend {
+  font-weight: bold;
+  text-align: center;
+}
+
+fieldset input[type=radio] {
+  width: 10px;
+}
+
+input[type=checkbox] {
+  height: 15px;
+}
+
+fieldset input[type=checkbox] {
+  float: left;
+}
+
+fieldset select {
+  display: block;
+  margin-left: -1px;
+}
+
+fieldset textarea {
+  width: 99%;
+  display: block;
+  margin: auto;
+  padding: auto;
+  float: left;
+  background-color:red  ;
+}
+
+.przyciski {
+  float:left;
+  margin-right: 2px;
+  background-color: yellow;
+  border: none;
+}
+
+.przyciski:hover {
+  background-color: white;
+}
+
+label {
+  font-size: 30px;
+}
+
+input[type="text"] {
+  background-color: yellow;
+}
+
+input[type="number"] {
+  background-color: red;
+}
+
