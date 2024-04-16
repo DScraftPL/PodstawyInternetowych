@@ -1,0 +1,79 @@
+fieldset {
+  margin: 2% 0%;
+  border-color: #160F29;
+  border-style: dashed;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold; 
+}
+
+fieldset legend {
+  font-weight: bold;
+  text-align: center;
+}
+
+fieldset input[type=radio] {
+  width: 20px;
+}
+
+input[type=checkbox] {
+  height: 15px;
+}
+
+fieldset select {
+  display: block;
+  margin-left: -1px;
+}
+
+fieldset textarea {
+  width: 99%;
+  display: block;
+  margin: auto;
+  padding: auto;
+  float: left;
+  background-color:#F3DFC1  ;
+}
+
+.przyciski {
+  margin-right: 2px;
+  background-color: white;
+  border: none;
+  height: 50%;
+}
+
+.przyciski:hover {
+  background-color: black;
+}
+
+label {
+  display: inline-block;
+  width: 80pt;
+  text-align: left;
+}
+
+input[type="text"] {
+  background-color: lightyellow;
+}
+
+input[type="number"] {
+  background-color: lightblue;
+}
+
+#disclaimer {
+  font-size: smaller;
+}
+
+fieldset#kontakt {
+  display: block;
+
+}
+
+fieldset#kontakt input{
+  width: 20%;
+}
+
+#koniec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

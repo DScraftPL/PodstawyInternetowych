@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="kalkulator.js"></script>
+    <title>Kalkulator</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Kalkulator</legend>
+        <p>
+            X: <input id="liczba1">
+            Y: <input id="liczba2">
+        </p>
+        <button onclick="oblicz()">Oblicz</button>
+        <input type="radio" name="dzialanie" value="+"> + 
+        <input type="radio" name="dzialanie" value="-"> -
+        <input type="radio" name="dzialanie" value="*"> * 
+        <input type="radio" name="dzialanie" value="/"> / 
+        <input disabled content="" id="wynik">
+    </fieldset>
+</body>
+</html>

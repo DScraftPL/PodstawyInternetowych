@@ -1,0 +1,13 @@
+table {
+    width: 50%;
+}
+
+caption {
+    font-size: 150%;
+    text-align: left;
+    font-weight: bolder;
+}
+
+button {
+    width: 10%;
+}
