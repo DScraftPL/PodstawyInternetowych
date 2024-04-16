@@ -1,6 +1,6 @@
 fieldset {
   margin: 2% 0%;
-  border-color: blue;
+  border-color: #160F29;
   border-style: dashed;
   padding: 5px;
   font-size: 20px;
@@ -13,15 +13,11 @@ fieldset legend {
 }
 
 fieldset input[type=radio] {
-  width: 10px;
+  width: 20px;
 }
 
 input[type=checkbox] {
   height: 15px;
-}
-
-fieldset input[type=checkbox] {
-  float: left;
 }
 
 fieldset select {
@@ -35,29 +31,49 @@ fieldset textarea {
   margin: auto;
   padding: auto;
   float: left;
-  background-color:red  ;
+  background-color:#F3DFC1  ;
 }
 
 .przyciski {
-  float:left;
   margin-right: 2px;
-  background-color: yellow;
+  background-color: white;
   border: none;
+  height: 50%;
 }
 
 .przyciski:hover {
-  background-color: white;
+  background-color: black;
 }
 
 label {
-  font-size: 30px;
+  display: inline-block;
+  width: 80pt;
+  text-align: left;
 }
 
 input[type="text"] {
-  background-color: yellow;
+  background-color: lightyellow;
 }
 
 input[type="number"] {
-  background-color: red;
+  background-color: lightblue;
 }
 
+#disclaimer {
+  font-size: smaller;
+}
+
+fieldset#kontakt {
+  display: block;
+
+}
+
+fieldset#kontakt input{
+  width: 20%;
+}
+
+#koniec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

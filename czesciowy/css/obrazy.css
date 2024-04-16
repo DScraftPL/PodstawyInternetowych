@@ -4,8 +4,15 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+#content a {
+  height: 160px;
+  width: 280px;
+  margin: 1%;
+}
 
-.obrazy a {
-  width: 28%;
-  margin: 2%;
+#content a img {
+  height: 100%;
+  width: auto;
+  border: 5px #160F29 solid;
+  border-radius: 10%;
 }
