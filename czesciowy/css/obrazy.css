@@ -5,14 +5,12 @@
   flex-wrap: wrap;
 }
 #content a {
-  height: 160px;
-  width: 280px;
   margin: 1%;
 }
 
 #content a img {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   border: 5px #160F29 solid;
   border-radius: 10%;
 }
