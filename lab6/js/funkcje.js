@@ -4,7 +4,7 @@ function oblicz(){
     var ilerat=document.getElementById('ilerat');
     n = parseInt(ilerat.value);
     var procent=document.getElementById('procent');
-    pr = parseInt(ilerat.value);
+    pr = parseInt(procent.value)/100;
     pr_mc = pr/12;
     var rata=document.getElementById('rata');
     var odsetki=document.getElementById('odsetki');
