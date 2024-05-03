@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projekt Końcowy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rpi.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">RPI 4B</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rpi.html">Raspberry PI 4</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Projekty
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="pivpn.html">PiVPN</a></li>
+                <li><a class="dropdown-item" href="pihole.html">PiHole</a></li>
+                <li><a class="dropdown-item" href="vscode.html">VsCode Server</a></li>
+                <li><a class="dropdown-item" href="filebrowser.html">Filebrowser</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> 
+    <div class="container my-5">
+        <div class="row">
+            <div class="container col-md-10">
+                <h1 class="mb-4">Raspberry Pi 4B</h1>
+                <div id="carouselRPI" class="carousel slide mb-5 border border-2 border-start-0 border-end-0" data-bs-theme="dark">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselRPI" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselRPI" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselRPI" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../images/rpi2.png" class="img-fluid d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../images/rpi3.jpg" class="img-fluid d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../images/rpi4.webp" class="img-fluid d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRPI" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRPI" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <p class="fs-5 mb-0">RPI wyposażone jest w WiFi 5 i Bluetooth, posiada gniazdo ethernet, zasilanie odbywa się poprzez USB-C.</p>
+                <p class="fs-5">Dodatkowo, posiadam obudowę w celu lepszego zabezpieczenia, a procesor posiada przełączony radiator z wentylatorem, dla lepszego chłodzenia.</p>
+                <p>Gniazda USB-C są "zarezerwowane" na przyszłą rozbudowę. Planuję wydrukować stojak na 2 dyski HDD 2,5", by podłączyć je przejściówką USB to SATA3</p>
+            </div>
+            <div class="container col-md-2 d-none d-md-block">
+                <div class="d-flex align-items-center justify-content-center flex-column">
+                    <img class="img-fluid" src="../images/346_raspberry_pi_logo (1).jpg" alt="logoRPI">
+                    <p class="">logo RPI!</p>
+                    <a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/" class="btn btn-info btn-sm">Strona ze specyfikacjami</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer class="text-center mt-auto"><p class="fs-5">&#169;Copyright Kacper "DScraftPL" Wiącek</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
