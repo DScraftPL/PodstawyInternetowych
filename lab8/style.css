@@ -1,0 +1,168 @@
+body {
+  background: #DDBEA8;
+  color: #F3DFC1;
+}
+
+a {
+  color: #F3DFC1;
+}
+
+h1, h2, footer {
+  color: #F3DFC1;
+  text-align: center;
+}
+
+header {
+  padding-top: 10px;
+}
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-right: 5px;
+}
+
+#content {
+  box-sizing: content-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#tresc {
+  box-sizing: inherit;
+  width: 70%;
+  padding: 1%;
+  margin: 0 1% 0 0 ;
+  background: #246A73;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#kontener {
+  background: #160F29;
+  width: 90%;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 5px 10px 8px grey;
+}
+
+footer {
+  clear: both;
+  width:100%;
+  padding:5px 0;
+  text-align:center;
+}
+
+aside {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.box { 
+  border-radius: 20px;
+  background: #246A73;
+  padding: 5px;
+  margin: 5px;
+  font-size: 90%;
+}
+
+.box a {
+  color: #F3DFC1;
+}
+
+menu {
+  width: 90%;
+  text-align: left;
+  overflow: hidden;
+  font-family: calibri, tahoma;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2%;
+}
+menu li {
+  width: 15%;
+  border: 1px solid #DDBEA8;
+  list-style-type: none;
+  background: #246A73; 
+  margin: 0 5px;
+  text-align: center;
+}
+menu li:hover {
+  background: white;
+}
+menu li a {
+  display : block;
+  padding: 4pt 0 ;
+  text-decoration : none;
+}
+menu li li a {
+  width: 100%;
+}
+menu li li:hover {
+  background: white;
+}
+menu li ul {
+  overflow: hidden;
+  display: none;
+}
+menu li:hover ul {
+  position: absolute;
+  background: #aaa;
+  margin-top: 0;
+  padding: 0;
+  display: block;
+  width: 20%;
+}
+
+menu li:hover ul li{
+  width: 100%;
+}
+
+#tresc img {
+  display: block;
+  margin: auto;
+  width: 25%;
+}
+
+#tresc p {
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 720px) {
+  menu li {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  #content {
+    align-content: center;
+    flex-direction: column;
+  }
+  #tresc {
+    width: 90%;
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+  aside {
+    width: auto;
+  }
+}

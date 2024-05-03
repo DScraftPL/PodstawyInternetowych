@@ -4,8 +4,9 @@
     <title>formularz</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/formularze.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" >
+    <link href="formularze.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" >
+    <script src="walidacja.js"></script>
   </head>
   <body>
     <div id="kontener">
@@ -35,16 +36,16 @@
           </ul>
           <div id="formularz">
             <h1>Wybierz swoją pizze:</h1>
-            <form action="mailto:pizza@pizzeria.pl" method="POST">
+            <form action="mailto:pizza@pizzeria.pl" method="POST" onsubmit="return sprawdz()">
               <fieldset>
                 <legend>Rozmiar:</legend>
-                <input type="radio" name="rozmiar" value="1"> średnia
+                <input type="radio" name="rozmiar" value="1"> średnia <span class="czerwony" id="errorR"></span>
                 <input type="radio" name="rozmiar" value="2"> duża
                 <input type="radio" name="rozmiar" value="3"> XXL
               </fieldset>
               <fieldset>
                 <legend>Dodatki:</legend>
-                <input type="checkbox" name="dodatki" value="1"> peperoni <br>
+                <input type="checkbox" name="dodatki" value="1"> peperoni <span class="czerwony" id="errorC"></span> <br>
                 <input type="checkbox" name="dodatki" value="2"> szynka <br>
                 <input type="checkbox" name="dodatki" value="3"> pomidor <br>
                 <input type="checkbox" name="dodatki" value="4"> rukola <br>
@@ -62,12 +63,17 @@
               </fieldset>
               <fieldset id="kontakt">
                 <legend>Kontakt</legend>
-                <label>Imię*: </label><input type="text" name="imie" required pattern="^[A-Za-z][A-Za-z\s]*"><br>
-                <label>Nazwisko*: </label><input type="text" name="nazwisko" required pattern="^[A-Z][A-Za-z/-/]*" ><br>
-                <label>Email*: </label><input type="email" name="email" required placeholder="a@a.pl"><br>
-                <label>Data urodzenia: </label><input type="date" name="data"><br>
-                <label>Numer Telefonu*: </label><input type="tel" name="telefon" required><br>
-                <label>Wiek*: </label><input type="number" name="Wiek" required min="0" max="90">
+                <label>Imię*: </label><input type="text" id="imie" required>
+                <span class="czerwony" id="errorI"></span><br>
+                <label>Nazwisko*: </label><input type="text" id="nazwisko" required >
+                <span class="czerwony" id="errorN"></span><br>
+                <label>Email*: </label><input type="email" id="email" required placeholder="a@a.pl">
+                <span class="czerwony" id="errorE"></span><br>
+                <label>Data urodzenia: </label><input type="date" id="data"><br>
+                <label>Numer Telefonu*: </label><input type="tel" id="telefon" required>
+                <span class="czerwony" id="errorT"></span><br>
+                <label>Wiek*: </label><input type="number" id="wiek" required>
+                <span class="czerwony" id="errorW"></span>
               </fieldset>
               <div id="koniec">
                 <div id="przyciski">
