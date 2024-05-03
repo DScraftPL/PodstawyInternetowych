@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projekt Końcowy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -17,13 +18,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="rpi.html">Raspberry PI 4</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Projekty
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,18 +41,57 @@
     <div class="container my-5">
         <div class="row">
         <div class="container col-12 col-md-10">
-            <h1>Witaj Przybyszu!</h1>
+            <h1>PiVPN, czyli WireGuard</h1>
+            <p>Na zajęciach koła naukowego, stawialiśmy darmowego VPN'a - WireGuard. Maszyny wirtualne niestety czasami tworzą więcej problemów niż rozwiązują. <br> Instalacja samego WireGuard'a jest bardzo prosta, <a href="https://www.wireguard.com/quickstart/">ten guide (link)</a> pokazuje i opisuje ten proces.</p>
+            <p class="fs-4 mb-1">Dlaczego więc PiVPN?</p>
+            <p class="mb-2">Bo pozwala na proste zarządzanie WireGuard'em!</p>
+            <p class="my-0">Dzięki <a href="https://www.pivpn.io/"> temu skryptowi (link)</a> można bez problemu w terminalu zainstalować na rasberry jednego z dwóch możliwych VPN'ów (OpenVPN i WireGuard)</p>
+            <p class="my-1">Najważniejsze jednak jest zarządzanie z linii poleceń! Dla przykładu:</p>
+            <ul class="list-group list-group-numbered">
+              <li class="list-group-item border-0 p-0">Jednym poleceniem wygenerować konfigurację</li>
+              <li class="list-group-item border-0 p-0">Można wygenerować kod QR do szybkiego przeniesienia konfiguracji!</li>
+              <li class="list-group-item border-0 p-0">Łatwo sprawdzić ile konfiguracji zostało utworzonych i ile klientów jest podłączonych (z jakim adresem IP!)</li>
+              <li class="list-group-item border-0 p-0">Można zarządzać klientami</li>
+              <li class="list-group-item border-0 p-0 pb-1">W prosty sposób pozwala zrobić backup konfiguracji (pamietaj, rób backupy!)</li>
+            </ul>
+            <p>Jeżeli chodzi o działanie WireGuard'a, port na których został wystawiony VPN nie pokazuje się jako otwarty! Samo połączenie do VPN'a wymaga klienta, a klient musi mieć dodany plik .conf, generowany przez PiVPN.</p>
+            <p>Przykładowa konfiguracja utworzona przez skrypt:</p>
+            <ul class="list-group col-12 col-md-10 col-lg-8 col-xl-6" >
+              <li class="list-group-item bg-secondary-subtle border-bottom-0 pb-0">[Interface]</li>
+              <li class="list-group-item bg-secondary-subtle border-bottom-0 border-top-0 py-0">PrivateKey = wOBU+WVGI6dPAv+pnz7fftoufGwV29V/mtzDrZ4jXXM=</li>
+              <li class="list-group-item bg-secondary-subtle border-bottom-0 border-top-0 py-0">Address = 10.100.198.7/24,fd11:5ee:bad:c0de::7/64</li>
+              <li class="list-group-item bg-secondary-subtle border-top-0 pt-0">DNS = 10.100.198.1</li>
+              <li class="list-group-item bg-secondary-subtle border-bottom-0 py-0">[Peer]</li>
+              <li class="list-group-item bg-secondary-subtle border-bottom-0 border-top-0 py-0">PublicKey = 2jhZshgfJ9a5lt2BybCEM2C1Iv7iGmkHK0fj/C2plj8=</li>
+              <li class="list-group-item bg-secondary-subtle border-bottom-0 border-top-0 py-0">PresharedKey = gvr6xZTjHw/rFT7b++ZEF51YK12ljDUwDP7Mmx5BgZc=</li>
+              <li class="list-group-item bg-secondary-subtle border-top-0 pt-0">AllowedIPs = 0.0.0.0/0, ::0/0</li>
+            </ul>
+            <p class="mt-3">Dodatkowo, działa to z PiHole, o którym opowiadam na innej stronie! Przed instalacją należy zainstalować VPN'a.</p>
         </div>
-        <div class="container col-md-2 d-none d-md-block">
-            <div class="d-flex align-items-center justify-content-center flex-column">
-                <img class="img-fluid" src="../images/346_raspberry_pi_logo (1).jpg" alt="logoRPI">
-                <p class="">logo RPI!</p>
+        <div class="container col-md-2 d-none d-md-block mx-auto">
+          <div class="d-flex align-items-center justify-content-center flex-column p-0">
+              <img class="img-fluid mb-0" src="../images/346_raspberry_pi_logo (1).jpg" alt="logoRPI">
+              <p class="mb-2 mt-0">logo RPI!</p>
+              <div class="d-grid gap-0 mx-auto">
                 <a href="https://www.raspberrypi.com/products/raspberry-pi-4-model-b/" class="btn btn-info btn-sm">Strona ze specyfikacjami</a>
-            </div>
-        </div>
+                <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" class="btn btn-secondary btn-sm my-2">Wiki Self-Hosted</a>
+              </div>
+              <small>Dla szukających inspiracji</small>
+          </div>
+      </div>
     </div>
     </div>
-    <footer class="text-center mt-auto"><p class="fs-5">&#169;Copyright Kacper "DScraftPL" Wiącek</p></footer>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center pt-0 fs-6 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">&copy; Kacper "DScraftPL" Wiącek</p>
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="bi bi-house fs-4"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="bi bi-github fs-4"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="bi bi-reddit fs-4"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="bi bi-twitter fs-4"></i></a></li>
+        </ul>
+      </footer>
+    </div>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
