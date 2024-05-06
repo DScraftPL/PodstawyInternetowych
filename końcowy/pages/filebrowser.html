@@ -52,48 +52,56 @@
                 <label for="emailaddress" class="form-label">Adres email</label>
                 <input type="email" class="form-control" id="emailaddress" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">Nie zaspamimy cię (hehe)</div>
+                <span id="emailError" class="formError"></span>
               </div>
               <div class="mb-3">
                 <label for="name" class="form-label">Imię i Nazwisko</label>
                 <input type="text" class="form-control" id="name">
+                <span id="nameError" class="formError"></span>
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">Hasło</label>
                 <input type="password" class="form-control" id="password">
+                <span id="passError" class="formError"></span>
               </div>
               <div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Default radio
+                  <input class="form-check-input" type="radio" name="radioInput" id="radioInput1">
+                  <label class="form-check-label" for="radioInput1">
+                    1
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Default radio
+                  <input class="form-check-input" type="radio" name="radioInput" id="radioInput2">
+                  <label class="form-check-label" for="radioInput2">
+                    2
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Default checked radio
+                  <input class="form-check-input" type="radio" name="radioInput" id="radioInput3" checked>
+                  <label class="form-check-label" for="radioInput3">
+                    3
                   </label>
                 </div>
               </div>
-              <select class="form-select" aria-label="Wybór języki">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <div>
+                <select class="form-select" aria-label="Wybór języka">
+                  <option selected>Otwórz menu :evil:</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <span id="selectError" class="formError"></span>
+              </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="EULAcheck">
-                <label class="form-check-label" for="exampleCheck1">Zgadzam się z regulaminem dostępnym <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">tutaj</a></label>
+                <label class="form-check-label" for="EULAcheck">Zgadzam się z regulaminem dostępnym <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">tutaj</a></label>
+                <span id="EULAError" class="formError"></span>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <button type="" class="btn btn-secondary ">Check</button>
-              <button type="" class="btn btn-secondary ">Zapisani użytkownicy</button>
+              <button type="submit" class="" onclick="sprawdz()" >Wyślij</button>
+            <input type="button" class="" onclick="sprawdz()">Walidacja (nie wysyłaj, ale sprawdź!)</button> <!-- to nie powoduje resetu strony-->
+              <button type="reset" class="btn btn-info">Reset</button>
+              <button type="" class="btn btn-secondary" onclick="wyswietl()">Zapisani użytkownicy</button>
             </form>
         </div>
         <div class="container col-md-2 d-none d-md-block mx-auto">
@@ -121,6 +129,6 @@
       </footer>
     </div>  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
