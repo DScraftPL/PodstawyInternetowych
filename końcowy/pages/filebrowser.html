@@ -85,8 +85,8 @@
                 </div>
               </div>
               <div>
-                <select class="form-select" aria-label="Wybór języka">
-                  <option selected>Otwórz menu :evil:</option>
+                <select class="form-select" aria-label="Wybór języka" id="wyborselect">
+                  <option selected value="0">Otwórz menu :evil:</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
@@ -98,11 +98,13 @@
                 <label class="form-check-label" for="EULAcheck">Zgadzam się z regulaminem dostępnym <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">tutaj</a></label>
                 <span id="EULAError" class="formError"></span>
               </div>
-              <button type="submit" class="" onclick="sprawdz()">Wyślij</button>
-              <button type="button" class="" onclick="sprawdz()">Sprawdź</button>
-            <!-- <input type="button" class="" onclick="sprawdz()">Walidacja (nie wysyłaj, ale sprawdź!)</button> <!-- to nie powoduje resetu strony-->
+              <!--Dodać date, checkbox albo i nie-->
+              <button type="button" class="btn btn-primary" onclick="sprawdzwyslij()">Wyślij</button>
+              <button type="button" class="btn btn-info" onclick="sprawdz()">Sprawdź</button>
               <button type="reset" class="btn btn-info">Reset</button>
-              <button type="" class="btn btn-secondary" onclick="wyswietl()">Zapisani użytkownicy</button>
+              <button type="button" class="btn btn-secondary" onclick="wyswietl()">Zapisani użytkownicy</button>
+              <div id="user">
+              </div>
             </form>
         </div>
         <div class="container col-md-2 d-none d-md-block mx-auto">
