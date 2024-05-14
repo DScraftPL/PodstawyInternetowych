@@ -80,10 +80,12 @@ function sprawdzwyslij(){
 }
 
 function wyswietl(){
-  for(var i=0; i<localStorage.length; i++){
+  for(let i=0; i<localStorage.length; i++){
     var user = JSON.parse(localStorage.getItem('user'));
     console.log(user);
     var element = document.getElementById("user");
-    element.innerHTML = user.name + '<br>' + user.email;
+    for(let i=0; i<localStorage.length; i++){
+      element.innerHTML += '<div>' + user.name + '<br>' + user.email + '</div>';
+    }
   }
 } 
