@@ -47,7 +47,7 @@
               Ut vitae urna in dolor maximus tristique in vel ante. Praesent ullamcorper elit a eros sodales, in consectetur dolor varius. Duis lacinia arcu purus, in eleifend enim cursus vitae. Nullam egestas enim id elit convallis mattis. Quisque aliquet commodo ipsum at sodales. Sed pellentesque consectetur nibh sit amet gravida. Suspendisse tincidunt erat in leo sagittis sollicitudin. Duis congue orci ipsum, a placerat mi condimentum dignissim. Donec vel est placerat, hendrerit est quis, vulputate orci. Proin et tellus neque. Nullam fermentum ut felis in eleifend. Sed iaculis lectus id mauris luctus gravida. Pellentesque a velit eu ante pharetra sollicitudin. Nulla id maximus velit, sed varius urna.
             </p>
             <h2>W celach rejestracji do usługi możesz podać dane: :)</h2>
-            <form>
+            <form id="formularz">
               <div class="mb-3">
                 <label for="emailaddress" class="form-label">Adres email</label>
                 <input type="email" class="form-control" id="emailaddress" aria-describedby="emailHelp">
@@ -86,7 +86,7 @@
               </div>
               <div>
                 <select class="form-select" aria-label="Wybór języka" id="wyborselect">
-                  <option selected value="0">Otwórz menu :evil:</option>
+                  <option selected value="0">Otwórz menu</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
@@ -103,8 +103,7 @@
               <button type="button" class="btn btn-info" onclick="sprawdz()">Sprawdź</button>
               <button type="reset" class="btn btn-info">Reset</button>
               <button type="button" class="btn btn-secondary" onclick="wyswietl()">Zapisani użytkownicy</button>
-              <div id="user">
-              </div>
+              <div id="users"></div>
             </form>
         </div>
         <div class="container col-md-2 d-none d-md-block mx-auto">
