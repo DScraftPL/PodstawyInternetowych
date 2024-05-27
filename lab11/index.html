@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="color" id="kolorek">RGB
+        <input type="text" id="nazwakolorku">Nazwa
+        <br>
+        <button type="button" onclick="Szapisz()">Zapisz pare Session</button>
+        <button type="button" onclick="Spokaz()">Pokaz wszystkie pary Session</button>
+        <button type="button" onclick="Susun()">usun dane Session</button>
+        <br>
+        <button type="button" onclick="Lzapisz()">Zapisz pare Local</button>
+        <button type="button" onclick="Lpokaz()">Pokaz wszystkie pary Local</button>
+        <button type="button" onclick="Lusun()">usun dane Local</button>
+    </form>
+    <div id="elementy">
+    </div>
+</body>
+<script>
+    function Szapisz(){
+        var element = document.getElementById("kolorek").value;
+        sessionStorage.setItem(element, document.getElementById("nazwakolorku").value,);
+    }
+    function Spokaz(){
+        var divek = document.getElementById("elementy");
+        divek.innerHTML = "";
+        for(let i=0; i<sessionStorage.length; i++){
+            var zestorage = sessionStorage.getItem(sessionStorage.key(i));
+            divek.innerHTML += '<div id= "'+ sessionStorage.key(i) +'">' + zestorage + ' ' + sessionStorage.key(i) +'</div>'; 
+            document.getElementById(sessionStorage.key(i)).style.backgroundColor= sessionStorage.key(i);
+        }
+    }
+    function Susun(){
+        sessionStorage.clear();
+        var divek = document.getElementById("elementy");
+        divek.innerHTML = "";
+    }
+    function Lzapisz(){
+        var element = document.getElementById("kolorek").value;
+        localStorage.setItem(element, document.getElementById("nazwakolorku").value,);
+    }
+    function Lpokaz(){
+        var divek = document.getElementById("elementy");
+        divek.innerHTML = "";
+        for(let i=0; i<localStorage.length; i++){
+            var zestorage = localStorage.getItem(localStorage.key(i));
+            divek.innerHTML += '<div id= "'+ localStorage.key(i) +'">' + zestorage + ' ' + localStorage.key(i) +'</div>'; 
+            document.getElementById(localStorage.key(i)).style.backgroundColor= localStorage.key(i);
+        }
+    }
+    function Lusun(){
+        localStorage.clear();
+        var divek = document.getElementById("elementy");
+        divek.innerHTML = "";
+    }
+    console.log("zaladowano!");
+</script>
+</html>

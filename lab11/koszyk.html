@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form>
+            <input type="text" name="nazwa" id="nazwa"> nazwa produktu 
+            <input type="number" name="cena" id="cena"> cena 
+            <input type="color" name="kolor" id="kolor"> kolor
+            <input type="number" name="liczba" id="liczba"> liczba sztuk
+            <br>
+            <button type="button" onclick="zapisz()">Zapisz produkt do koszyka</button>
+            <button type="button" onclick="wyswietl()">Wyświetl koszyk</button>
+            <br>
+            <button type="button" onclick="zapiszalelista()">Zapisz produkt do koszyka ale lista</button>
+            <button type="button" onclick="wyswietlalelista()">Wyświetl koszyk ale lista (nowe)</button>
+            <br>
+            <button type="button" onclick="usun()">Usuń wszystkie produkty</button>
+            <br>
+            <input type="text" name="wyszukaj" id="wyszukaj">
+            <button type="button" onclick="wyszukuj()">wyszukaj</button>
+        </form>
+    </div>
+    <div id="divkoszyka">
+    </div>
+</body>
+<script src="koszyk.js"></script>
+</html>
