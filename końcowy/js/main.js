@@ -132,6 +132,11 @@ function usun(id){
 }
 
 async function fetchowanie(){
-  var response = await fetch("http://127.0.0.1:3000/").then( response => response.json()).then( dane => console.log(dane));
-  
+  var response = await fetch("http://127.0.0.1:3000/").then( response => response.json()).then( dane => {
+	  console.log(dane)
+  if(dane != null){
+  	var element = document.getElementById("dofetchapi");
+	element.innerHTML += dane.liczba;
+}
+});
 }

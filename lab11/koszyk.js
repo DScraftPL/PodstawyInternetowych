@@ -29,6 +29,7 @@ function wyswietl(){
 }
 function zapiszalelista(){
     var obiekcik = {};  
+    obiekcik.nazwa = document.getElementById("nazwa").value;
     obiekcik.cena = document.getElementById("cena").value;
     obiekcik.kolor = document.getElementById("kolor").value;
     obiekcik.liczba = document.getElementById("liczba").value;
@@ -37,10 +38,19 @@ function zapiszalelista(){
     if(lista === null){
         lista = [];
     }
-    lista.push(obiekcik);
+    var found = false;
+    for(let i=0; i<lista.length; i++){
+      if(obiekcik.nazwa == lista[i].nazwa){
+        found = true;
+        lista.splice(i, 1, obiekcik);
+      }
+    }
+    if(!found){
+      lista.push(obiekcik);
+    }
     localStorage.setItem("lista", JSON.stringify(lista));
     console.log(lista);
-}
+
 function wyswietlalelista(){
     var koszyczek = JSON.parse(localStorage.getItem('lista'));
     if(koszyczek===null){
@@ -50,11 +60,11 @@ function wyswietlalelista(){
         for(let i=0; i<koszyczek.length; i++){
             var obiekcik = koszyczek[i];
             wewhtmlkoszyczka += "<tr>" +
-            "<td>" + localStorage.key(i) + "</td>" +
+            "<td>" + obiekcik.nazwa + "</td>" +
             "<td>" + obiekcik.cena + "</td>" +
             "<td>" + obiekcik.kolor + "</td>" +
             "<td>" + obiekcik.liczba + "</td>" +
-            "<td>" + '<button type="button" onclick="modyfikuj('+ i +')">moduj</button>' + "</td>" +
+            "<td>" + '<button type="button" onclick="modyfikujlista('+ i +')">moduj</button>' + "</td>" +
             "<td>" + '<button type="button" onclick="usunel('+ i +')">usun</button>' + "</td>" + 
             "</tr>";
         }
@@ -93,6 +103,14 @@ function modyfikuj(i){
     document.getElementById("cena").value = obiekcik.cena;
     document.getElementById("kolor").value = obiekcik.kolor;
     document.getElementById("liczba").value = obiekcik.liczba;
+}
+function modyfikujlista(i){
+  lista = JSON.parse(localStorage.getItem("lista"));
+  obiekcik = lista[i];
+  document.getElementById("nazwa").value = obiekcik.nazwa;
+  document.getElementById("cena").value = obiekcik.cena;
+  document.getElementById("kolor").value = obiekcik.kolor;
+  document.getElementById("liczba").value = obiekcik.liczba;
 }
 function usunel(i){
     localStorage.removeItem(localStorage.key(i));
