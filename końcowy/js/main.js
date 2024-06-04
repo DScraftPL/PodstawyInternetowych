@@ -84,12 +84,24 @@ function sprawdzwyslij(){
         dane += "radio" + i + "\n";
       }
     }
-    if(window.confirm(dane)){
-      localStorage.setItem("user"+indeks, JSON.stringify(profil));
-    } 
+    var found = false;
+    for(let i=0; i<localStorage.length; i++){
+      if(JSON.parse(localStorage.getItem("user"+i)).email==profil.email){
+        if(window.confirm(dane + "czy chcesz zaktualizować użytkownika")){
+          localStorage.setItem("user"+i, JSON.stringify(profil));
+          found = true;
+        }
+      }
+    }
+    if(!found){
+      if(window.confirm(dane + "czy chcesz zapisać użytkownika?")){
+        localStorage.setItem("user"+indeks, JSON.stringify(profil));
+      }
+    }
   } else {
     window.alert("sprawdź formularz");
   }
+  wyswietl();
 }
 
 function wyswietl(){
@@ -133,10 +145,12 @@ function usun(id){
 
 async function fetchowanie(){
   var response = await fetch("http://127.0.0.1:3000/").then( response => response.json()).then( dane => {
-	  console.log(dane)
-  if(dane != null){
-  	var element = document.getElementById("dofetchapi");
-	element.innerHTML += dane.liczba;
-}
-});
+	  console.log(dane);
+    if(dane != null){
+  	  var element = document.getElementById("dofetchapi");
+      var wewhtml = "";
+      wewhtml += '<div class="alert alert-success" role="alert">' + '<p> liczba: ' + dane.liczba + ' jakis hex: ' + dane.ciag + '</p></div>';
+      element.innerHTML = wewhtml; 
+    }
+  });
 }
