@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Formularz rejestracji</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    //definicja klasy User
+    class User {
+      constructor(email = "", login = "user", pass = "user") {
+        this.login = login;
+        this.pass = pass;
+        this.email = email;
+      }
+      pokaz() {
+        //uzupełnij dane o loginie I emailu:
+        return "Dane użytkownika:\nlogin: " + this.login + "\npass: " + this.pass + "\nemail: " + this.email;
+      }
+      formularzRejestracji() {
+        var formularz = "";
+        formularz += '<div>email: <input id="email"></input> </div>';
+        formularz += '<div>login: <input id="login"></input> </div>';
+        formularz += '<div>pass: <input id="pass"></input> </div>';
+        formularz += '<div><button id="rejestruj">uzupełnij</button></div>'
+        return formularz;
+      }
+    } // koniec definicji klasy User
+    //skrypt główny – instrukcje są wykonywane dopiero po załadowaniu DOM:
+    document.addEventListener('DOMContentLoaded', () => {
+      var user = new User();
+      //pokaż dane o użytkowniku na konsoli
+      console.log(user.pokaz());
+      document.getElementById("formularz").innerHTML = user.formularzRejestracji();
+      var rejestruj = document.getElementById("rejestruj")
+      rejestruj.addEventListener("click", () => {
+        user.login = document.getElementById('login').value;
+        user.email = document.getElementById('email').value;
+        user.pass = document.getElementById('pass').value;
+        console.log(user.pokaz());
+        var czyIstnieje = false;
+        for (let i = 0; i < localStorage.length; i++) {
+          if (JSON.parse(localStorage.getItem(localStorage.key(i))).login == user.login || JSON.parse(localStorage.getItem(localStorage.key(i))).email == user.email) {
+            czyIstnieje = true;
+          }
+        }
+        if (czyIstnieje) {
+          document.getElementById("info").innerHTML = '<h1> istnieje juz taki uzytkownik </h1>';
+        } else {
+          document.getElementById("info").innerHTML = "";
+          localStorage.setItem(user.login, JSON.stringify(user));
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div>
+    <h2>Rejestracja nowego użytkownika w localStorage</h2>
+    <!-- Przygotowanie elementów do wyświetlania formularza rejestracji i danych i komunikatów informacyjnych -->
+    <div id='formularz'></div>
+    <div id='info'></div>
+  </div>
+</body>
+
+</html>
